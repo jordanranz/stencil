@@ -68,6 +68,7 @@ export const bundleApp = async (config: d.Config, compilerCtx: d.CompilerCtx, bu
     return rollupBuild;
 
   } catch (e) {
+    console.log(e);
     if (!buildCtx.hasError) {
       loadRollupDiagnostics(compilerCtx, buildCtx, e);
     }
